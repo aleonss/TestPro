@@ -77,26 +77,26 @@ WSGI_APPLICATION = 'TestPro.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-'''
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'aleonsxy_test_db',
         'USER': 'aleonsxy_postgres',
-        'PASSWORD': 'test_password',
+        'PASSWORD': 'mavida_password',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
 }
 
-
+'''
 
 DATABASES = {'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }}
 
-'''
+
 
 DATABASES = {
     'default': {
@@ -109,7 +109,7 @@ DATABASES = {
     }
 }
 
-
+'''
 
 
 
@@ -158,7 +158,6 @@ STATIC_URL = '/static/'
 
 
 
-'''
 
 LOGGING = {
     'version': 1,
@@ -178,12 +177,12 @@ LOGGING = {
         },
     },
 }
-'''
+
 
 
 SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_BROWSER_XSS_FILTER = True
-SECURE_SSL_REDIRECT = False
+SECURE_SSL_REDIRECT = True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 X_FRAME_OPTIONS = 'DENY'
