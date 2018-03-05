@@ -30,7 +30,7 @@ SECRET_KEY = '$_d)m-0i90jdelf-#!=a_(&)7!ur&gtho!xgx!+k92(-du_9s9'
 DEBUG = False
 
 #ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['*', '.aleons.xyz']
+ALLOWED_HOSTS = ["*", '.aleons.xyz']
 
 
 # Application definition
@@ -111,7 +111,9 @@ DATABASES = {
 
 '''
 
-
+STATIC_ROOT = '/home/aleonsxy/public_html/static'
+MEDIA_URL   = '/media/'
+MEDIA_ROOT  = '/home/aleonsxy/public_html/media '
 
 
 
@@ -157,8 +159,6 @@ STATIC_URL = '/static/'
 
 
 
-
-
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -180,13 +180,21 @@ LOGGING = {
 
 
 
+
+
+
+
+
+
+
+
 SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_BROWSER_XSS_FILTER = True
 SECURE_SSL_REDIRECT = True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 X_FRAME_OPTIONS = 'DENY'
-TEMPLATE_DEBUG= False
+TEMPLATE_DEBUG= True
 
 SECURE_HSTS_SECONDS = 3600
 SECURE_HSTS_PRELOAD = True
